@@ -6,6 +6,10 @@ function appendToDisplay(input) {
   display.value += input;
 }
 
-function clearDisplay() {}
+function clearDisplay() {
+  display.value = "";
+}
 
-function calculate() {}
+function calculate() {
+  display.value = eval(display.value);
+}
