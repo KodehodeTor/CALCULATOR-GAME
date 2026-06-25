@@ -20,3 +20,33 @@ function calculate() {
     display.value = "Error";
   }
 }
+// NOTES FOR MEG SELV - ta data fra kalkulator og bruke det i en annen funksjon:
+
+// // Step 1: Add a click event listener to the button
+// document.getElementById('actionButton').addEventListener('click', function() {
+
+//     // Step 2: Grab the raw string value from the input field
+//     let rawInput = document.getElementById('calcInput').value;
+
+//     // Step 3: Convert the string into a usable number
+//     let processedNumber = Number(rawInput);
+
+//     // Step 4: Validate that the user actually entered a number
+//     if (isNaN(processedNumber) || rawInput === '') {
+//         alert('Please enter a valid number');
+//         return;
+//     }
+
+//     // Step 5: Pass the data onwards to another function
+//     useDataOnwards(processedNumber);
+// });
+
+// // Step 6: Define the next function to receive and use the data
+// function useDataOnwards(value) {
+//     console.log("Data received for next steps:", value);
+
+//     // Example onwards actions:
+//     let tax = value * 0.15;                 // 1. Math calculations
+//     document.body.style.fontSize = value + 'px'; // 2. Update UI styling
+//     // sendDataToServer(value);             // 3. Send to a database API
+// }
