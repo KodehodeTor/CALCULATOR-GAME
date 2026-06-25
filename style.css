@@ -29,6 +29,7 @@ body {
   text-align: left;
   border: none;
   background-color: hsl(0, 0%, 20%);
+  color: white;
 }
 
 /*  Puts the key in a grid, repeats for each column, 4 - 1fr=fractional unit. 1fr indicates that each column should use equal space */
