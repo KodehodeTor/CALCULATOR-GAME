@@ -43,6 +43,9 @@ body {
   text-align: center;
   width: 320px;
   margin: auto;
+  font-size: 4rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
 }
 
 #generate-btn {
@@ -50,7 +53,7 @@ body {
   color: white;
   border: none;
   padding: 12px 24px;
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: bold;
   border-radius: 6px;
   cursor: pointer;
@@ -58,8 +61,8 @@ body {
   transition: background-color 0.2s ease;
 }
 
-button:hover {
-  background-color: #2980b9;
+#generate-btn:hover {
+  background-color: #6ca675;
 }
 
 /* CALCULATOR */

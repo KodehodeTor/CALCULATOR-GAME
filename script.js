@@ -1,5 +1,28 @@
 // Calculator program
 
+// RNG
+
+//Cache DOM element reference:
+
+const generateBtn = document.getElementById(`generate-btn`);
+const numberDisplay = document.getElementById(`number-display`);
+
+// Function to calculate a random number between 100,000-999,999
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (999999 - 100000 + 1) + min);
+}
+
+//Attach event listener to handle interaction
+generateBtn.addEventListener(`click`, () => {
+  const minRange = 100000;
+  const maxRange = 999999;
+
+  const randomNumber = getRandomNumber(minRange, maxRange);
+
+  //Update the layout view with the new value
+  numberDisplay.textContent = randomNumber;
+});
+
 // Variable for display to use under
 const display = document.getElementById("display");
 
