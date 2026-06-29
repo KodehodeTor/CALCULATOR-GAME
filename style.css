@@ -14,13 +14,18 @@ body {
   background-color: hsl(0, 0%, 95%);
 }
 
+/* CALCULATOR */
+
 #calculator {
   font-family: Arial, Helvetica, sans-serif;
   background-color: hsl(0, 0%, 15%);
   border-radius: 5px;
   max-width: 500px;
   overflow: hidden;
+  margin-right: 5rem;
 }
+
+/* DISPLAY */
 
 #display {
   width: 100%;
@@ -31,6 +36,8 @@ body {
   background-color: hsl(0, 0%, 20%);
   color: white;
 }
+
+/* BUTTONS */
 
 /*  Puts the key in a grid, repeats for each column, 4 - 1fr=fractional unit. 1fr indicates that each column should use equal space */
 #keys {
@@ -71,4 +78,77 @@ button:active {
 
 .operator-btn:active {
   background-color: hsl(28, 95%, 75%);
+}
+
+/* TIMER */
+¨ #timer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(0, 0%, 60%);
+  border: 5px solid black;
+  border-radius: 25px;
+  padding: 30px;
+  background-color: white;
+}
+
+.h1-timer {
+  display: flex;
+  flex-direction: column;
+  font-size: 4rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: hsl(0, 0%, 50%);
+  align-items: center;
+}
+
+#timer-display {
+  font-size: 5rem;
+  font-family: monospace;
+  font-weight: bold;
+  color: hsl(0, 0%, 30%);
+  text-shadow: 2px 2px 2px hsl(hue, saturation, 75%);
+}
+
+/* TIMER BUTTONS */
+
+#timer-controls button {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 5px;
+  min-width: 125px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.5s ease;
+}
+
+#startBtn {
+  background-color: hsla(120, 89%, 25%, 0.825);
+}
+
+#startBtn:hover {
+  background-color: hsla(120, 30%, 40%, 0.825);
+}
+
+#stopBtn {
+  background-color: hsla(0, 89%, 25%, 0.825);
+}
+
+#stopBtn:hover {
+  background-color: hsla(0, 30%, 40%, 0.825);
+}
+#resetBtn {
+  background-color: hsla(236, 89%, 25%, 0.825);
+}
+
+#resetBtn:hover {
+  background-color: hsla(225, 30%, 40%, 0.825);
 }
