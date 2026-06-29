@@ -72,12 +72,25 @@ function stop() {}
 
 function reset() {}
 
-// Function sets current time to now, then uses currentTime and startTime to set elapsed time.
+// Function sets current time to now, then uses currentTime - startTime to give us elapsed time.
 function update() {
   const currentTime = Date.now();
   elapsedTime = currentTime - startTime;
 
-  //
+  // Converting elapsed time to a readable format.
+
+  // Elapsed time / 1000 ms * 60 seconds * 60 minutes
   let hours = Math.floor(elapsedTime / (1000 * 60 * 60));
-  let minutes = (elaspedTime / (1000 * 60)) % 60;
+  // Elapsed time / 1000 ms * 60 seconds, then modulus 60 which gives us remainers to not hit anything over 60.
+  let minutes = Math.floor((elapsedTime / (1000 * 60)) % 60);
+
+  // Elasped time / 1000 ms to convert ms to seconds
+  let seconds = Math.floor((elapsedTime / 1000) % 60);
+
+  // Elapsed time (already in ms) modulus 1000, divide by 10 to get two first digits
+  let miliseconds = Math.floor((elapsedTime % 1000) / 10);
+
+  //Access our display with the readable time format set over:
+
+  timerDisplay.textContent = `${hours}:${minutes}:${seconds}:${miliseconds}`;
 }
