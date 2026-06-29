@@ -53,24 +53,47 @@ function calculate() {
 
 // TIMER
 
+// Initial variables
 const timerDisplay = document.getElementById("timer-display");
 let timer = null;
 let startTime = 0;
 let elapsedTime = 0;
 let isRunning = false;
 
+//If our stopWatch isnt running, then start the stopwatch.
 function start() {
   if (!isRunning) {
+    //Set the startTime
     startTime = Date.now() - elapsedTime;
+    //Update every 10 milisecond.
     timer = setInterval(update, 10);
     isRunning = true;
   }
-  console.log(startTime);
 }
 
-function stop() {}
+// Need to check if our program is running, if true, then stop the stopwatch
+function stop() {
+  if (isRunning) {
+    //Stops the stopwatch from running
+    clearInterval(timer);
+    //Calculates the elapsed time
+    elaspedTime = Date.now() - startTime;
+    // Stops the stopwatch
+    isRunning = false;
+  }
+}
 
-function reset() {}
+// Reset the stopwatch
+function reset() {
+  //Stops the stopwatch from running
+  clearInterval(timer);
+  // Sets the stopwatch back to initial variables
+  startTime = 0;
+  elapsedTime = 0;
+  isRunning = false;
+  // Resets the time to 0
+  timerDisplay.textContent = "00:00:00:00";
+}
 
 // Function sets current time to now, then uses currentTime - startTime to give us elapsed time.
 function update() {
@@ -89,6 +112,12 @@ function update() {
 
   // Elapsed time (already in ms) modulus 1000, divide by 10 to get two first digits
   let miliseconds = Math.floor((elapsedTime % 1000) / 10);
+
+  //Converting hours, minutes, seconds and miliseconds to a string before displaying it
+  hours = String(hours).padStart(2, "0");
+  minutes = String(minutes).padStart(2, "0");
+  seconds = String(seconds).padStart(2, "0");
+  miliseconds = String(miliseconds).padStart(2, "0");
 
   //Access our display with the readable time format set over:
 
