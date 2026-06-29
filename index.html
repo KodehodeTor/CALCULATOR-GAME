@@ -8,32 +8,38 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <!-- Calculator -->
-
-    <!-- HTML NOTES FOR MEG SELV: <input type="number" id="calcInput" placeholder="Enter a number">
-<button id="actionButton">Process Data</button> -->
-    <div id="calculator">
-      <input id="display" readonly />
-      <div id="keys">
-        <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
-        <button onclick="appendToDisplay('7')">7</button>
-        <button onclick="appendToDisplay('8')">8</button>
-        <button onclick="appendToDisplay('9')">9</button>
-        <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
-        <button onclick="appendToDisplay('4')">4</button>
-        <button onclick="appendToDisplay('5')">5</button>
-        <button onclick="appendToDisplay('6')">6</button>
-        <button onclick="appendToDisplay('*')" class="operator-btn">*</button>
-        <button onclick="appendToDisplay('1')">1</button>
-        <button onclick="appendToDisplay('2')">2</button>
-        <button onclick="appendToDisplay('3')">3</button>
-        <button onclick="appendToDisplay('/')" class="operator-btn">/</button>
-        <button onclick="appendToDisplay('0')">0</button>
-        <button onclick="appendToDisplay('.')">.</button>
-        <button onclick="calculate()">=</button>
-        <button onclick="clearDisplay()" class="operator-btn">C</button>
+    <!-- RNG - GENERATOR -->
+    <section class="RNG_and_Calc">
+      <div class="generator-container">
+        <h2 class="h2-rng">Random Number Generator</h2>
+        <div id="number-display" class="display-box">#######</div>
+        <button id="generate-btn">Start game!</button>
       </div>
-    </div>
+
+      <!-- CALCULATOR -->
+      <div id="calculator">
+        <input id="display" readonly />
+        <div id="keys">
+          <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
+          <button onclick="appendToDisplay('7')">7</button>
+          <button onclick="appendToDisplay('8')">8</button>
+          <button onclick="appendToDisplay('9')">9</button>
+          <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
+          <button onclick="appendToDisplay('4')">4</button>
+          <button onclick="appendToDisplay('5')">5</button>
+          <button onclick="appendToDisplay('6')">6</button>
+          <button onclick="appendToDisplay('*')" class="operator-btn">*</button>
+          <button onclick="appendToDisplay('1')">1</button>
+          <button onclick="appendToDisplay('2')">2</button>
+          <button onclick="appendToDisplay('3')">3</button>
+          <button onclick="appendToDisplay('/')" class="operator-btn">/</button>
+          <button onclick="appendToDisplay('0')">0</button>
+          <button onclick="appendToDisplay('.')">.</button>
+          <button onclick="calculate()">=</button>
+          <button onclick="clearDisplay()" class="operator-btn">C</button>
+        </div>
+      </div>
+    </section>
 
     <!-- TIMER -->
     <div id="timer">

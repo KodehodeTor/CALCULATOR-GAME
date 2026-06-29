@@ -22,34 +22,19 @@ function calculate() {
 }
 // NOTES FOR MEG SELV - ta data fra kalkulator og bruke det i en annen funksjon:
 
-// // Step 1: Add a click event listener to the button
-// document.getElementById('actionButton').addEventListener('click', function() {
+//Psuedo koding:
 
-//     // Step 2: Grab the raw string value from the input field
-//     let rawInput = document.getElementById('calcInput').value;
+// Math game:
 
-//     // Step 3: Convert the string into a usable number
-//     let processedNumber = Number(rawInput);
+// Math.random lager et tall på XXX,XXX, når XXX,XXX er laget start timeren.
+// Deretter når man har kalkulert seg frem til nøyaktig XXX,XXX stop timer.
+// Om man har brukt kun + og - så trekkes det 30% av scoren.
+// For hvert sekund man bruker trekkes 3% av scoren.
+// Pluss poeng for å bruke /  og * med 20%
 
-//     // Step 4: Validate that the user actually entered a number
-//     if (isNaN(processedNumber) || rawInput === '') {
-//         alert('Please enter a valid number');
-//         return;
-//     }
+// Hvordan kalkuleres highscoren? XXX,XXX Orginal sum, delt ned på 1000 så man får 100, deretter trekk ned vilkår. Siste sum = highscore?
 
-//     // Step 5: Pass the data onwards to another function
-//     useDataOnwards(processedNumber);
-// });
-
-// // Step 6: Define the next function to receive and use the data
-// function useDataOnwards(value) {
-//     console.log("Data received for next steps:", value);
-
-//     // Example onwards actions:
-//     let tax = value * 0.15;                 // 1. Math calculations
-//     document.body.style.fontSize = value + 'px'; // 2. Update UI styling
-//     // sendDataToServer(value);             // 3. Send to a database API
-// }
+// Highscore liste?
 
 // TIMER
 
@@ -67,6 +52,7 @@ function start() {
     startTime = Date.now() - elapsedTime;
     //Update every 10 milisecond.
     timer = setInterval(update, 10);
+    //Run the stopwatch
     isRunning = true;
   }
 }
@@ -91,7 +77,7 @@ function reset() {
   startTime = 0;
   elapsedTime = 0;
   isRunning = false;
-  // Resets the time to 0
+  // Resets the time to 00:00:00:00
   timerDisplay.textContent = "00:00:00:00";
 }
 
