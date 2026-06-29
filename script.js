@@ -50,3 +50,34 @@ function calculate() {
 //     document.body.style.fontSize = value + 'px'; // 2. Update UI styling
 //     // sendDataToServer(value);             // 3. Send to a database API
 // }
+
+// TIMER
+
+const timerDisplay = document.getElementById("timer-display");
+let timer = null;
+let startTime = 0;
+let elapsedTime = 0;
+let isRunning = false;
+
+function start() {
+  if (!isRunning) {
+    startTime = Date.now() - elapsedTime;
+    timer = setInterval(update, 10);
+    isRunning = true;
+  }
+  console.log(startTime);
+}
+
+function stop() {}
+
+function reset() {}
+
+// Function sets current time to now, then uses currentTime and startTime to set elapsed time.
+function update() {
+  const currentTime = Date.now();
+  elapsedTime = currentTime - startTime;
+
+  //
+  let hours = Math.floor(elapsedTime / (1000 * 60 * 60));
+  let minutes = (elaspedTime / (1000 * 60)) % 60;
+}
