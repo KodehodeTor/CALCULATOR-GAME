@@ -139,7 +139,7 @@ function update() {
 const generateBtn = document.getElementById(`generate-btn`);
 const numberDisplay = document.getElementById(`number-display`);
 
-// Function to calculate a random number between 100,000-999,999
+// Function to calculate a random number between 10,000-99,999
 function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (99999 - 10000 + 1) + min);
 }
