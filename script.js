@@ -1,5 +1,17 @@
 // Calculator program
 
+//Psuedo koding:
+
+// Math game:
+
+// Math.random lager et tall på XX,XXX, når XX,XXX er laget start timeren. function start()✅
+// Deretter når man har kalkulert seg frem til nøyaktig XX,XXX stop timer. function stop()✅
+// Alle 4 operators må bli brukt som win condition. ✅
+
+// Hvordan kalkuleres highscoren? XX,XXX Orginal sum, delt ned på 1000 så man får 99, deretter trekk ned vilkår. Siste sum = highscore?
+
+// Highscore liste?
+
 // Variable for display
 const display = document.getElementById("display");
 
@@ -46,22 +58,6 @@ function calculate() {
   }
 }
 // NOTES FOR MEG SELV - ta data fra kalkulator og bruke det i en annen funksjon:
-
-//Psuedo koding:
-
-// Math game:
-
-// Math.random lager et tall på XX,XXX, når XX,XXX er laget start timeren. function start()
-// Deretter når man har kalkulert seg frem til nøyaktig XX,XXX stop timer. function stop()
-// Om man har brukt kun + og - så trekkes det 20% av scoren.
-// For hvert sekund man bruker trekkes 1% av scoren.
-// Pluss poeng for å bruke /  og * med 20%
-
-// Hvordan kalkuleres highscoren? XX,XXX Orginal sum, delt ned på 1000 så man får 99, deretter trekk ned vilkår. Siste sum = highscore?
-
-// Highscore liste?
-
-// Ha en knapp til å resette spill etter highscore er oppført
 
 // TIMER
 

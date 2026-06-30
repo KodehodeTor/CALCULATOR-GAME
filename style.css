@@ -182,27 +182,39 @@ button:active {
   transition: background-color 0.5s ease;
 }
 
-/* EFFECTS */
+/* EFFECTS | Changed opacity on all buttons to hide them to eliminate bugs in the game where you could stop the timer while operating calculator.*/
 
 #startBtn {
   background-color: hsla(120, 89%, 25%, 0.825);
+  opacity: 0;
+  pointer-events: none;
 }
 
 #startBtn:hover {
   background-color: hsla(120, 30%, 40%, 0.825);
+  opacity: 0;
+  pointer-events: none;
 }
 
 #stopBtn {
   background-color: hsla(0, 89%, 25%, 0.825);
+  opacity: 0;
+  pointer-events: none;
 }
 
 #stopBtn:hover {
   background-color: hsla(0, 30%, 40%, 0.825);
+  opacity: 0;
+  pointer-events: none;
 }
 #resetBtn {
   background-color: hsla(236, 89%, 25%, 0.825);
+  opacity: 0;
+  pointer-events: none;
 }
 
 #resetBtn:hover {
   background-color: hsla(225, 30%, 40%, 0.825);
+  opacity: 0;
+  pointer-events: none;
 }
