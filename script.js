@@ -12,10 +12,35 @@ function appendToDisplay(input) {
 function clearDisplay() {
   display.value = "";
 }
-// Function calculates the inputs by using eval, then catches any error if input is wrong. For example by using a operator after a number without following it.
+// Function calculates the inputs by using eval,
 function calculate() {
+  const expression = display.value; // Save the expression before eval()
+
   try {
-    display.value = eval(display.value);
+    const result = eval(expression);
+    display.value = result;
+
+    //Variable for win condictions int he game, all operators have to be used.
+    const usedPlus = expression.includes("+");
+    const usedMinus = expression.includes("-");
+    const usedMultiply = expression.includes("*");
+    const usedDivide = expression.includes("/");
+
+    // If the number in the calculator is the same as RNG / targetNUmber and all operators have been used you win the game. If not error message is given on win conditions. Catches any error if input is wrong. For example by using a operator after a number without following it.
+    if (
+      Number(result) === targetNumber &&
+      usedPlus &&
+      usedMinus &&
+      usedMultiply &&
+      usedDivide
+    ) {
+      stop();
+      alert("🎉 You win!");
+    } else if (Number(result) !== targetNumber) {
+      alert("Wrong answer!");
+    } else {
+      alert("Correct number, but you must use +, -, * and /.");
+    }
   } catch (error) {
     display.value = "Error";
   }
@@ -133,7 +158,7 @@ generateBtn.addEventListener(`click`, () => {
   const randomNumber = getRandomNumber(minRange, maxRange);
   targetNumber = randomNumber;
 
-  //Displays randomnumber in textContent.
+  //Displays randomnumber in textContent on display.
   numberDisplay.textContent = randomNumber;
 
   //Start timer when "Start Game on RNG has been clicked"
