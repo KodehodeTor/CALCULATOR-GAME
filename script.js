@@ -1,29 +1,6 @@
 // Calculator program
 
-// RNG
-
-//Cache DOM element reference:
-
-const generateBtn = document.getElementById(`generate-btn`);
-const numberDisplay = document.getElementById(`number-display`);
-
-// Function to calculate a random number between 100,000-999,999
-function getRandomNumber(min, max) {
-  return Math.floor(Math.random() * (999999 - 100000 + 1) + min);
-}
-
-//Attach event listener to handle interaction
-generateBtn.addEventListener(`click`, () => {
-  const minRange = 100000;
-  const maxRange = 999999;
-
-  const randomNumber = getRandomNumber(minRange, maxRange);
-
-  //Update the layout view with the new value
-  numberDisplay.textContent = randomNumber;
-});
-
-// Variable for display to use under
+// Variable for display
 const display = document.getElementById("display");
 
 // Function accepts parameter input and whatever value is passed into the function will be stored in input.
@@ -35,7 +12,7 @@ function appendToDisplay(input) {
 function clearDisplay() {
   display.value = "";
 }
-// Function calculates the inputs by using eval, then catches any error if input is wrong. For example by using a operator after a number without following it, or adding two operators after eachother.
+// Function calculates the inputs by using eval, then catches any error if input is wrong. For example by using a operator after a number without following it.
 function calculate() {
   try {
     display.value = eval(display.value);
@@ -49,15 +26,17 @@ function calculate() {
 
 // Math game:
 
-// Math.random lager et tall på XXX,XXX, når XXX,XXX er laget start timeren.
-// Deretter når man har kalkulert seg frem til nøyaktig XXX,XXX stop timer.
-// Om man har brukt kun + og - så trekkes det 30% av scoren.
-// For hvert sekund man bruker trekkes 3% av scoren.
+// Math.random lager et tall på XX,XXX, når XX,XXX er laget start timeren. function start()
+// Deretter når man har kalkulert seg frem til nøyaktig XX,XXX stop timer. function stop()
+// Om man har brukt kun + og - så trekkes det 20% av scoren.
+// For hvert sekund man bruker trekkes 1% av scoren.
 // Pluss poeng for å bruke /  og * med 20%
 
-// Hvordan kalkuleres highscoren? XXX,XXX Orginal sum, delt ned på 1000 så man får 100, deretter trekk ned vilkår. Siste sum = highscore?
+// Hvordan kalkuleres highscoren? XX,XXX Orginal sum, delt ned på 1000 så man får 99, deretter trekk ned vilkår. Siste sum = highscore?
 
 // Highscore liste?
+
+// Ha en knapp til å resette spill etter highscore er oppført
 
 // TIMER
 
@@ -86,7 +65,7 @@ function stop() {
     //Stops the stopwatch from running
     clearInterval(timer);
     //Calculates the elapsed time
-    elaspedTime = Date.now() - startTime;
+    elapsedTime = Date.now() - startTime;
     // Stops the stopwatch
     isRunning = false;
   }
@@ -132,3 +111,31 @@ function update() {
 
   timerDisplay.textContent = `${hours}:${minutes}:${seconds}:${miliseconds}`;
 }
+
+// RNG
+
+//Cache DOM element reference:
+
+const generateBtn = document.getElementById(`generate-btn`);
+const numberDisplay = document.getElementById(`number-display`);
+
+// Function to calculate a random number between 100,000-999,999
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (99999 - 10000 + 1) + min);
+}
+
+//Attach event listener to handle interaction
+generateBtn.addEventListener(`click`, () => {
+  const minRange = 10000;
+  const maxRange = 99999;
+
+  //Adds targetNumber to be the same as randomNumber
+  const randomNumber = getRandomNumber(minRange, maxRange);
+  targetNumber = randomNumber;
+
+  //Displays randomnumber in textContent.
+  numberDisplay.textContent = randomNumber;
+
+  //Start timer when "Start Game on RNG has been clicked"
+  start();
+});
