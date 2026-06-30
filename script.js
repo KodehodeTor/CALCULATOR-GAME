@@ -14,13 +14,13 @@ function clearDisplay() {
 }
 // Function calculates the inputs by using eval,
 function calculate() {
-  const expression = display.value; // Save the expression before eval()
+  const expression = display.value; // Save the expression before eval
 
   try {
     const result = eval(expression);
     display.value = result;
 
-    //Variable for win condictions int he game, all operators have to be used.
+    //Variable for win condictions in the game, all operators have to be used.
     const usedPlus = expression.includes("+");
     const usedMinus = expression.includes("-");
     const usedMultiply = expression.includes("*");
