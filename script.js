@@ -47,7 +47,7 @@ function calculate() {
       usedDivide
     ) {
       stop();
-      alert("🎉 You win!");
+      alert("🎉 You win! 🎉");
     } else if (Number(result) !== targetNumber) {
       alert("Wrong answer!");
     } else {

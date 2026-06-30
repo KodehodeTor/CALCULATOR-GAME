@@ -14,14 +14,8 @@
     />
   </head>
   <body>
-    <!-- RNG - GENERATOR -->
-    <section class="RNG_and_Calc">
-      <div class="generator-container">
-        <h2 class="h2-rng">Random Number Generator</h2>
-        <div id="number-display" class="display-box">#######</div>
-        <button id="generate-btn">Start game!</button>
-      </div>
-
+    <div class="page">
+      <h1 class="h1-calculator">CALCULATOR GAME</h1>
       <!-- CALCULATOR -->
       <div id="calculator">
         <input id="display" readonly />
@@ -45,10 +39,16 @@
           <button onclick="clearDisplay()" class="operator-btn">C</button>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- TIMER -->
+    <!-- TIMER & RNG -->
     <div id="timer">
+      <!-- RNG - GENERATOR -->
+      <div class="generator-container">
+        <h2 class="h2-rng">Random Number Generator</h2>
+        <div id="number-display" class="display-box">#######</div>
+        <button id="generate-btn">Start game!</button>
+      </div>
       <h1 class="h1-timer">Timer</h1>
       <div id="timer-container">
         <div id="timer-display">00:00:00:00</div>
