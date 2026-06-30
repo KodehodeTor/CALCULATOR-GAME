@@ -156,6 +156,6 @@ generateBtn.addEventListener(`click`, () => {
   //Displays randomnumber in textContent on display.
   numberDisplay.textContent = randomNumber;
 
-  //Start timer when "Start Game on RNG has been clicked"
+  //Start timer when "Start Game" on RNG has been clicked
   start();
 });
