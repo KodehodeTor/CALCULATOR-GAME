@@ -28,9 +28,10 @@ body {
   color: #333333;
   margin-bottom: 20px;
   font-size: 1, 5rem;
-  display: flex;
   font-size: 2rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .generator-container {
@@ -44,8 +45,9 @@ body {
   width: 320px;
   margin: auto;
   font-size: 4rem;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bolder;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
   width: 100%;
 }
 
@@ -69,7 +71,9 @@ body {
 /* CALCULATOR */
 
 #calculator {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
   background-color: hsl(0, 0%, 15%);
   border-radius: 5px;
   max-width: 500px;
@@ -86,6 +90,9 @@ body {
   border: none;
   background-color: hsl(0, 0%, 20%);
   color: white;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* BUTTONS */
@@ -108,6 +115,9 @@ button {
   font-size: 3rem;
   font-weight: bold;
   cursor: pointer;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Effects */
@@ -148,21 +158,26 @@ button:active {
   padding: 30px;
   background-color: white;
   margin-left: 5rem;
-  width: 600px;
+  width: 800px;
+  margin-bottom: 5rem;
 }
 
 .h1-timer {
-  display: flex;
-  flex-direction: column;
   font-size: 4rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
   color: hsl(0, 0%, 50%);
-  align-items: center;
+  text-align: center;
+  margin-left: 3rem;
 }
 
 #timer-display {
-  font-size: 5rem;
-  font-family: monospace;
+  font-size: 3rem;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-style: normal;
   font-weight: bold;
   color: hsl(0, 0%, 30%);
   text-shadow: 2px 2px 2px hsl(hue, saturation, 75%);
@@ -173,7 +188,10 @@ button:active {
 .h2-timer {
   text-align: center;
   font-size: 42px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-style: normal;
   width: 600px;
   margin-left: 4rem;
 }
@@ -181,8 +199,11 @@ button:active {
 .p-timer {
   text-align: center;
   font-size: 36px;
-  font-family: Arial, Helvetica, sans-serif;
-  width: 600px;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-style: normal;
+  width: 800px;
   margin-left: 4rem;
 }
 
@@ -202,7 +223,7 @@ button:active {
   transition: background-color 0.5s ease;
 } */
 
-/* EFFECTS | Changed opacity on all buttons to hide them to eliminate bugs in the game where you could stop the timer while operating calculator.*/
+/* EFFECTS | Changed opacity on all buttons to hide them thus eliminate bugs in the game where you could stop the timer while operating calculator.*/
 
 #startBtn {
   background-color: hsla(120, 89%, 25%, 0.825);

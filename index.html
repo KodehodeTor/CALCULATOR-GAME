@@ -6,6 +6,12 @@
     <title>Calculator game</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- RNG - GENERATOR -->
@@ -43,12 +49,6 @@
 
     <!-- TIMER -->
     <div id="timer">
-      <h2 class="h2-timer">How to win the game:</h2>
-      <p class="p-timer">
-        Press "Start game!" to start the game. You have to calculate the
-        randomly generated number in the calculator by using all the operators.
-        Good luck!
-      </p>
       <h1 class="h1-timer">Timer</h1>
       <div id="timer-container">
         <div id="timer-display">00:00:00:00</div>
@@ -58,6 +58,14 @@
           <button id="resetBtn" onclick="reset()">Reset</button>
         </div>
       </div>
+
+      <h2 class="h2-timer">How to play:</h2>
+      <p class="p-timer">
+        Press "Start game!" <br /><br />You have to calculate the randomly
+        generated number in the calculator by using all the operators. <br />
+        <br />
+        Good luck!
+      </p>
     </div>
 
     <!-- INSERT HIGHSCORE LIST HERE -->
