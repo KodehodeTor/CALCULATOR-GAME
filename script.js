@@ -8,9 +8,9 @@
 // Deretter når man har kalkulert seg frem til nøyaktig XX,XXX stop timer. function stop()✅
 // Alle 4 operators må bli brukt som win condition. ✅
 
-// Hvordan kalkuleres highscoren? XX,XXX Orginal sum, delt ned på 1000 så man får 99, deretter trekk ned vilkår. Siste sum = highscore?
+// Highscore liste? ❌
 
-// Highscore liste?
+// Hvordan kalkuleres highscoren? XX,XXX Orginal sum, delt ned på 1000 så man får 99, deretter trekk ned vilkår. Siste sum = highscore? ❌
 
 // Variable for display
 const display = document.getElementById("display");
@@ -57,7 +57,6 @@ function calculate() {
     display.value = "Error";
   }
 }
-// NOTES FOR MEG SELV - ta data fra kalkulator og bruke det i en annen funksjon:
 
 // TIMER
 

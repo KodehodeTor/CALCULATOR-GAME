@@ -21,7 +21,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-self: center;
-  outline: 5px solid green;
+  border: 5px solid black;
 }
 
 .h2-rng {
@@ -148,6 +148,7 @@ button:active {
   padding: 30px;
   background-color: white;
   margin-left: 5rem;
+  width: 600px;
 }
 
 .h1-timer {
@@ -167,9 +168,28 @@ button:active {
   text-shadow: 2px 2px 2px hsl(hue, saturation, 75%);
 }
 
+/* Win condition text */
+
+.h2-timer {
+  text-align: center;
+  font-size: 42px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 600px;
+  margin-left: 4rem;
+}
+
+.p-timer {
+  text-align: center;
+  font-size: 36px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 600px;
+  margin-left: 4rem;
+}
+
 /* TIMER BUTTONS */
 
-#timer-controls button {
+/* HIDDEN CODE FOR BETTER GAME EXPERIENCE */
+/* #timer-controls button {
   font-size: 1.5rem;
   font-weight: bold;
   padding: 10px 20px;
@@ -180,7 +200,7 @@ button:active {
   cursor: pointer;
   color: white;
   transition: background-color 0.5s ease;
-}
+} */
 
 /* EFFECTS | Changed opacity on all buttons to hide them to eliminate bugs in the game where you could stop the timer while operating calculator.*/
 
