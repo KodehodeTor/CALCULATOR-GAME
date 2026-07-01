@@ -1,17 +1,5 @@
 // Calculator program
 
-//Psuedo koding:
-
-// Math game:
-
-// Math.random lager et tall på XX,XXX, når XX,XXX er laget start timeren. function start()✅
-// Deretter når man har kalkulert seg frem til nøyaktig XX,XXX stop timer. function stop()✅
-// Alle 4 operators må bli brukt som win condition. ✅
-
-// Highscore liste? ❌
-
-// Hvordan kalkuleres highscoren? XX,XXX Orginal sum, delt ned på 1000 så man får 99, deretter trekk ned vilkår. Siste sum = highscore? ❌
-
 // Variable for display
 const display = document.getElementById("display");
 

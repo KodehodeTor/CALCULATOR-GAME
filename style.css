@@ -14,6 +14,13 @@ body {
   background-color: hsl(0, 0%, 85%);
 }
 
+html {
+  transform: scale(0.5);
+  transform-origin: center;
+  height: 100%;
+  width: 100%;
+}
+
 /* RNG */
 
 .RNG_and_Calc {
